@@ -98,7 +98,7 @@ public class StringDemo {
             boolean b2 = Boolean.parseBoolean("FALSE"); // false
             //字符串->字符数组：
             char[] cs = "Hello".toCharArray(); // String -> char[]
-            String s = new String(cs); // char[] -> String
+            String s22 = new String(cs); // char[] -> String
             cs[0]='X';
             System.out.println(s);//Hello,不会变，复制了一份
         }
