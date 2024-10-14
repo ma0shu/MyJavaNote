@@ -5,27 +5,26 @@ import java.util.Arrays;
 
 public class ExceptionsDemo {
     //Object{
-    //    Throwable{
-    //        Error{
-    //            StackOverflowError
-    //            OutOfMemoryError...
-    //        }//严重错误，程序无法处理
-    //        Exception{
-    //            RuntimeException{
-    //                NullPointerException
-    //                IndexOutOfBoundsException
-    //                IllegalArgumentException...
-    //            }//运行时异常，修复程序
-    //            IOException{
-    //                FileNotFoundException
-    //                SocketException...
-    //            }//IO异常,应该捕获并处理
-    //            SQLException...
-    //        }
-    //    }
-    //}
-    //必须捕获的异常，包括Exception及其子类，但不包括RuntimeException及其子类，
-    // 这种类型的异常称为Checked Exception。
+    //  └─Throwable{
+    //     ├─Error//严重错误，程序无法处理，不需要捕获
+    //     │  ├─ StackOverflowError
+    //     │  └─ OutOfMemoryError...
+    //     └─Exception//异常，除了Rt都要求强制捕获
+    //        ├─ RuntimeException//运行时异常，不要求强制捕获
+//            │  ├─ NullPointerException
+//            │  ├─ IndexOutOfBoundsException
+//            │  ├─ SecurityException
+//            │  └─ IllegalArgumentException
+//            │     └─ NumberFormatException
+//            ├─ IOException
+//            │  ├─ UnsupportedCharsetException
+//            │  ├─ FileNotFoundException
+//            │  └─ SocketException
+//            ├─ ParseException
+//            ├─ GeneralSecurityException
+//            ├─ SQLException
+//            └─ TimeoutException
+    //必须捕获的异常，包括Exception及其子类，称为Checked Exception。
     //不需要捕获的异常，包括Error及其子类，RuntimeException及其子类。
     //e.g.
     public static void main(String[] args) {
