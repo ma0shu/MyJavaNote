@@ -34,7 +34,7 @@ public class ExceptionsDemo {
             System.out.println(Arrays.toString(bs));
         } catch (UnsupportedEncodingException e) {
             System.out.println(e);
-        }
+        }//注意类型后面有个小e
     }
     /*
     static byte[] toGBK(String s) {
