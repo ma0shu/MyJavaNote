@@ -26,6 +26,11 @@ public class ObjectOriented {
     }
 }
 class Person{
+    public Person() {
+    }
+    public Person(String name){
+        this.name=name;
+    }
     private int    age;   //²»Ð´private=public
     private int    money;
     int            height;
